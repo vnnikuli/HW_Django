@@ -1,0 +1,64 @@
+Watching for file changes with StatReloader
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/python/3.10.13/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/python/3.10.13/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/workspaces/HW_Django/HW_1/project1/myapp/views.py", line 47, in index
+    logger.info(f'посещение страницы index в: {datetime.now()}')
+NameError: name 'datetime' is not defined
+"GET / HTTP/1.1" 500 75309
+Internal Server Error: /about/
+Traceback (most recent call last):
+  File "/usr/local/python/3.10.13/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/python/3.10.13/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/workspaces/HW_Django/HW_1/project1/myapp/views.py", line 118, in about
+    logger.info(f'посещение страницы about в: {datetime.now()}')
+NameError: name 'datetime' is not defined
+"GET /about/ HTTP/1.1" 500 75559
+/workspaces/HW_Django/HW_1/project1/myapp/views.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/python/3.10.13/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/python/3.10.13/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/workspaces/HW_Django/HW_1/project1/myapp/views.py", line 48, in index
+    logger.info(f'посещение страницы index в: {datetime.now()}')
+AttributeError: module 'datetime' has no attribute 'now'
+"GET / HTTP/1.1" 500 75419
+Internal Server Error: /about/
+Traceback (most recent call last):
+  File "/usr/local/python/3.10.13/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/python/3.10.13/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/workspaces/HW_Django/HW_1/project1/myapp/views.py", line 119, in about
+    logger.info(f'посещение страницы about в: {datetime.now()}')
+AttributeError: module 'datetime' has no attribute 'now'
+"GET /about/ HTTP/1.1" 500 75532
+/workspaces/HW_Django/HW_1/project1/myapp/views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/python/3.10.13/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/python/3.10.13/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/workspaces/HW_Django/HW_1/project1/myapp/views.py", line 32, in index
+    logger.info(f'посещение страницы index в: {datetime.now()}')
+AttributeError: module 'datetime' has no attribute 'now'
+"GET / HTTP/1.1" 500 74922
+/workspaces/HW_Django/HW_1/project1/myapp/views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+посещение страницы index в: 2024-02-11 14:36:17.439363
+"GET / HTTP/1.1" 200 1265
+посещение страницы about в: 2024-02-11 14:36:28.333607
+"GET /about/ HTTP/1.1" 200 1763
