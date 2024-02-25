@@ -1,0 +1,46 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="{% static "bootstrap/css/bootstrap.css" %}">
+
+    <title>{% block title %} Главная {% endblock %}</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <section>
+            <nav class="nav">
+              <a class="nav-link" href="/">Home</a>
+              <a class="nav-link" href="/clients">Clients</a>
+              <a class="nav-link" href="/about">About</a>
+            </nav>
+        </section>
+
+        <section>
+        {% block content %}
+            <h1>Урок 3. Работа с представлениями и шаблонами</h1>
+            <p>Доработаем задачу 8 из прошлого семинара про клиентов, товары и заказы.<br>
+            Создайте шаблон для вывода всех заказов клиента и списком товаров внутри каждого заказа.<br>
+            Подготовьте необходимый маршрут и представление.</p>
+
+            <h3>Задание</h3>
+            <p>Продолжаем работать с товарами и заказами.</p>
+            <p>Создайте шаблон, который выводит список заказанных клиентом товаров из всех его заказов с сортировкой по времени:</p>
+            <ul>
+                <li>за последние 7 дней (неделю)</li>
+                <li>за последние 30 дней (месяц)</li>
+                <li>за последние 365 дней (год)</li> 
+            </ul>
+            <p>Товары в списке не должны повторятся.</p>
+        {% endblock %}
+        </section>
+    </div>
+
+    <script src="{% static "bootstrap/js/bootstrap.js"%}"></script>
+</body>
+</html>
