@@ -9,19 +9,19 @@ from django.http import HttpResponse
 
 def index(request):
     """Главная страница."""
-    return render(request, 'myapp/index.html')
+    return render(request, 'index.html')
 
 
 def about(request):
     """Страница About."""
-    return render(request, 'myapp/about.html')
+    return render(request, 'about.html')
 
 
 def clients_list(request):
     """Список клиентов."""
     clients = Client.objects.all()
     context = {'clients': clients}
-    return render(request, 'myapp/clients_list.html', context)
+    return render(request, 'clients_list.html', context)
 
 
 def client_orders(request, client_id):
@@ -42,7 +42,7 @@ def client_orders(request, client_id):
         'orders': order_prods,
     }
 
-    return render(request, 'myapp/client_orders.html', context)
+    return render(request, 'client_orders.html', context)
 
 
 def client_prods(request, client_id, days_history):
@@ -66,7 +66,7 @@ def client_prods(request, client_id, days_history):
         'products': prod_info
     }
 
-    return render(request, 'myapp/client_products.html', context)
+    return render(request, 'client_products.html', context)
 
 
 def period(days: int) -> str:

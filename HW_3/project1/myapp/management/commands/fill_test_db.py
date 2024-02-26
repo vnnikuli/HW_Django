@@ -1,4 +1,5 @@
 import random
+
 from django.core.management.base import BaseCommand
 from myapp.models import Client, Product, Order, OrderProducts
 from datetime import datetime, timedelta
@@ -65,8 +66,9 @@ class Command(BaseCommand):
             order.order_date = self.get_random_date(start, end)
             for _ in range(prod_in_order):
                 prod = random.choice(products)
+                # if OrderProducts.objects.filter(order_id=order.pk, product_id=prod.pk).first() is None:
                 prod_cnt = random.randint(1, MAX_PROD_IN_ORDER)
-                OrderProducts.create(order=order, product=prod, product_count=prod_cnt)
+                OrderProducts.objects.create(order=order, product=prod, product_count=prod_cnt)
                 order.cost += prod_cnt * prod.price
             order.save()
 
